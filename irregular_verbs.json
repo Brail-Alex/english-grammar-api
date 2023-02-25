@@ -1,0 +1,64 @@
+[
+  {
+    "translation": "быть",
+    "v1": "be",
+    "v2": "was,were",
+    "v3": "been"
+  },
+  {
+    "translation": "начинать",
+    "v1": "begin",
+    "v2": "began",
+    "v3": "begun"
+  },
+  {
+    "translation": "делать",
+    "v1": "do",
+    "v2": "did",
+    "v3": "done"
+  },
+  {
+    "translation": "стать",
+    "v1": "become",
+    "v2": "became",
+    "v3": "become"
+  },
+  {
+    "translation": "выносить",
+    "v1": "bear",
+    "v2": "bore",
+    "v3": "born"
+  },
+  {
+    "translation": "бить",
+    "v1": "beat",
+    "v2": "beat",
+    "v3": "beaten"
+  },
+  {
+    "translation": "кусать",
+    "v1": "bite",
+    "v2": "bit",
+    "v3": "bitten"
+  },
+  {
+    "translation": "дуть",
+    "v1": "blow",
+    "v2": "blew",
+    "v3": "blown"
+  },
+  {
+    "translation": "ломать",
+    "v1": "break",
+    "v2": "broke",
+    "v3": "broken"
+  },
+  {
+    "translation": "приносить",
+    "v1": "bring",
+    "v2": "brought",
+    "v3": "brought"
+  }
+
+]
+
