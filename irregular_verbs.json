@@ -1,59 +1,69 @@
 [
   {
+    "id" : 0,
     "translation": "быть",
     "v1": "be",
     "v2": "was,were",
     "v3": "been"
   },
   {
+    "id" : 1,
     "translation": "начинать",
     "v1": "begin",
     "v2": "began",
     "v3": "begun"
   },
   {
+    "id" : 2,
     "translation": "делать",
     "v1": "do",
     "v2": "did",
     "v3": "done"
   },
   {
+    "id" : 3,
     "translation": "стать",
     "v1": "become",
     "v2": "became",
     "v3": "become"
   },
   {
+    "id" : 4,
     "translation": "выносить",
     "v1": "bear",
     "v2": "bore",
     "v3": "born"
   },
   {
+    "id" : 5,
     "translation": "бить",
     "v1": "beat",
     "v2": "beat",
     "v3": "beaten"
   },
   {
+    "id" : 6,
     "translation": "кусать",
     "v1": "bite",
     "v2": "bit",
     "v3": "bitten"
   },
   {
+    "id" : 7,
     "translation": "дуть",
     "v1": "blow",
     "v2": "blew",
     "v3": "blown"
   },
   {
+    "id" : 8,
     "translation": "ломать",
     "v1": "break",
     "v2": "broke",
     "v3": "broken"
   },
   {
+    "id" : 9,
     "translation": "приносить",
     "v1": "bring",
     "v2": "brought",

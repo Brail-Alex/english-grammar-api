@@ -1,6 +1,6 @@
-package org.example.application.port;
+package org.example.core.application.port;
 
-import org.example.domain.IrregularVerb;
+import org.example.core.domain.IrregularVerb;
 
 import java.util.List;
 
