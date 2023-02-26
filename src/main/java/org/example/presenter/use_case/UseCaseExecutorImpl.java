@@ -1,4 +1,4 @@
-package org.example.presentor.use_case;
+package org.example.presenter.use_case;
 
 import org.example.core.application.use_case.UseCase;
 import org.example.core.application.use_case.UseCaseExecutor;
