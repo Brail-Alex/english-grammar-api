@@ -11,7 +11,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class IrregularVerb {
 
-    private Long id;
+    private short id;
     private String translation;
     private String v1;
     private String v2;
