@@ -1,4 +1,4 @@
-package org.example.presenter.entities;
+package org.example.presenter.model;
 
 import lombok.Value;
 

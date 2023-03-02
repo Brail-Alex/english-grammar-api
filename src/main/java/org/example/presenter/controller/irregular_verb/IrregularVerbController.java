@@ -4,7 +4,7 @@ import org.example.core.application.use_case.GetIrregularVerbListUseCase;
 import org.example.core.application.use_case.GetRandomIrregularVerbUseCase;
 import org.example.core.application.use_case.UseCaseExecutor;
 import org.example.core.domain.IrregularVerb;
-import org.example.presenter.entities.VariantTargetResponse;
+import org.example.presenter.model.VariantTargetResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
