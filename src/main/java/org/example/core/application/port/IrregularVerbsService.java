@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IrregularVerbsService {
     List<IrregularVerb> getAll();
-    IrregularVerb getRandom();
+    String[] getRandomVariantAndTarget();
 }

@@ -24,10 +24,58 @@ public class IrregularVerbsAdapter implements IrregularVerbsService {
     }
 
     @Override
-    public IrregularVerb getRandom() {
-        short index = (short) (Math.random() * (irregularVerbs.size() - 1));
+    public String[] getRandomVariantAndTarget() {
 
-        return irregularVerbs.get(index);
+        IrregularVerb irregularVerb = irregularVerbs.get(getRandomNumberFromZero((short) (irregularVerbs.size() -1)));
+
+        short variantFieldIndex = getRandomNumberFromZero((short) 3);
+        short targetFieldIndex = getRandomNumberFromZero((short) 3);
+
+        while (variantFieldIndex == targetFieldIndex) {
+            targetFieldIndex = getRandomNumberFromZero((short) 3);
+        }
+
+        String variant = "";
+        String target = "";
+        String  id = String.valueOf(irregularVerb.getId());
+
+        switch (variantFieldIndex) {
+            case (0):
+                variant = irregularVerb.getTranslation();
+                break;
+            case (1):
+                variant = irregularVerb.getV1();
+                break;
+            case (2):
+                variant = irregularVerb.getV2();
+                break;
+            case (3):
+                variant = irregularVerb.getV3();
+                break;
+        }
+
+        switch (targetFieldIndex) {
+            case (0):
+                target = "translation";
+                break;
+            case (1):
+                target = "V1";
+                break;
+            case (2):
+                target = "V2";
+                break;
+            case (3):
+                target = "V3";
+                break;
+        }
+
+        String variantTarget[] = new String[]{id, variant, target};
+
+        return variantTarget;
+}
+
+    private Short getRandomNumberFromZero(short to) {
+        return (short) (Math.random() * to);
     }
 
     private List<IrregularVerb> readIrregularVerbsFromFile() {
