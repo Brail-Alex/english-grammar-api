@@ -8,6 +8,7 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class IrregularVerbsAdapter implements IrregularVerbsService {
     private final String FILE_NAME = "irregular_verbs.json";
@@ -24,9 +25,14 @@ public class IrregularVerbsAdapter implements IrregularVerbsService {
     }
 
     @Override
+    public IrregularVerb getIrregularVerbById(Short id) {
+        return irregularVerbs.get(id);
+    }
+
+    @Override
     public String[] getRandomVariantAndTarget() {
 
-        IrregularVerb irregularVerb = irregularVerbs.get(getRandomNumberFromZero((short) (irregularVerbs.size() -1)));
+        IrregularVerb irregularVerb = irregularVerbs.get(getRandomNumberFromZero((short) (irregularVerbs.size() - 1)));
 
         short variantFieldIndex = getRandomNumberFromZero((short) 3);
         short targetFieldIndex = getRandomNumberFromZero((short) 3);
@@ -37,7 +43,7 @@ public class IrregularVerbsAdapter implements IrregularVerbsService {
 
         String variant = "";
         String target = "";
-        String  id = String.valueOf(irregularVerb.getId());
+        String id = String.valueOf(irregularVerb.getId());
 
         switch (variantFieldIndex) {
             case (0):
@@ -72,7 +78,29 @@ public class IrregularVerbsAdapter implements IrregularVerbsService {
         String variantTarget[] = new String[]{id, variant, target};
 
         return variantTarget;
-}
+    }
+
+    @Override
+    public Boolean isTargetEqualsToAnswer(Short id, String target, String answer) {
+        IrregularVerb irregularVerb = irregularVerbs.get(id);
+        String targetValue = "";
+        switch (target) {
+            case ("translation"):
+                targetValue = irregularVerb.getTranslation();
+                break;
+            case ("V1"):
+                targetValue = irregularVerb.getV1();
+                break;
+            case ("V2"):
+                targetValue = irregularVerb.getV2();
+                break;
+            case ("V3"):
+                targetValue = irregularVerb.getV3();
+                break;
+        }
+
+        return Objects.equals(answer, targetValue);
+    }
 
     private Short getRandomNumberFromZero(short to) {
         return (short) (Math.random() * to);
